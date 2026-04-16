@@ -13,7 +13,7 @@
 ## 참고 문서
 
 - [팀 개발 환경 및 실행 가이드 Notion](https://aboard-woolen-7bf.notion.site/3449192e21f2808a98b0d839dd2b358d?source=copy_link)
-- [Auth API Postman 테스트 컬렉션](https://.postman.co/workspace/My-Workspace~39dbdca4-c1b8-41d9-8a19-bf957a106d89/folder/16128519-dac99157-eeec-4d8c-962d-6c7b53ed81b0?action=share&creator=16128519&ctx=documentation)
+- [Auth API Postman 테스트 컬렉션](https://dark-crater-170331.postman.co/workspace/My-Workspace~39dbdca4-c1b8-41d9-8a19-bf957a106d89/folder/16128519-dac99157-eeec-4d8c-962d-6c7b53ed81b0?action=share&creator=16128519&ctx=documentation)
 
 Notion 문서에는 팀원이 로컬 환경에서 프로젝트를 실행하고 개발을 시작할 때 필요한 기본 안내가 정리되어 있습니다.
 
@@ -353,7 +353,7 @@ public ResponseEntity<ApiResponse<ResStoreDto>> createStore(
 
 Auth API 테스트 컬렉션:
 
-- [Auth API Postman 테스트 컬렉션](https://.postman.co/workspace/My-Workspace~39dbdca4-c1b8-41d9-8a19-bf957a106d89/folder/16128519-dac99157-eeec-4d8c-962d-6c7b53ed81b0?action=share&creator=16128519&ctx=documentation)
+- [Auth API Postman 테스트 컬렉션](https://dark-crater-170331.postman.co/workspace/My-Workspace~39dbdca4-c1b8-41d9-8a19-bf957a106d89/folder/16128519-dac99157-eeec-4d8c-962d-6c7b53ed81b0?action=share&creator=16128519&ctx=documentation)
 
 ### 기본 테스트 순서
 
