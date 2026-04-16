@@ -5,19 +5,29 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.sparta.spartadelivery.global.config.SecurityConfig;
+import com.sparta.spartadelivery.global.infrastructure.config.security.JwtAuthenticationFilter;
 import com.sparta.spartadelivery.global.presentation.controller.ExceptionTestController;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.context.annotation.FilterType;
 
 // MVC 계층만 로드해서 전역 예외 처리 응답 형식을 빠르게 검증한다.
-@WebMvcTest(ExceptionTestController.class)
-@Import({GlobalExceptionHandler.class, SecurityConfig.class})
+@WebMvcTest(
+        controllers = ExceptionTestController.class,
+        excludeFilters = @ComponentScan.Filter(
+                type = FilterType.ASSIGNABLE_TYPE,
+                classes = JwtAuthenticationFilter.class
+        )
+)
+@AutoConfigureMockMvc(addFilters = false)
+@Import(GlobalExceptionHandler.class)
 class GlobalExceptionHandlerTest {
 
     @Autowired
